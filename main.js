@@ -1,44 +1,32 @@
-const trigger = document.querySelectorAll('div');
-for (const button of trigger) {
-    button.addEventListener('click', on, true)
-  }
-
-
+const current = document.querySelector('#img01');
+const imgs = document.querySelectorAll('.image img');
+const image = document.querySelector('.img_container');
+const addClass = document.querySelectorAll('.over');
+// const opacity = 0.5;
+// console.log(current)
+console.log(image.className)
+console.log(addClass)
+console.log(addClass[0].className)
 function on() {
     document.getElementById("image_viewer").style.display = "block"; 
-    const images = document.querySelectorAll('img')
-    images.className += "myImg";  
-  }
-  
-  function off() {
-    document.getElementById("image_viewer").style.display = "none";
-  }
-
-
-
-  // Get the modal
-var modal = document.getElementById("image_viewer");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.querySelector(".myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-//   captionText.innerHTML = this.alt;
+    console.log('working on function');  
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+function off() {
+    document.getElementById("image_viewer").style.display = "none";
+}
 
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
+const imgClick = (e) => {
 
+    current.src = e.target.src;
+    image.classList.add(e.srcElement.classList.item(0));
+    console.log('working');
+    console.log(e);
+    console.log(image.className);
+    console.log(e.src.className);
+    
+    // imgs.style.opacity = 1;
+}
 
-function myFunction() {
-    var element = document.getElementById("myDIV");
-    element.classList.add("mystyle");
-  }
+imgs.forEach(img => img.addEventListener('click', imgClick));
+imgs.forEach(img => img.addEventListener('click', on));
