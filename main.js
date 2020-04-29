@@ -18,12 +18,13 @@ const imgClick = (e) => {
     // console.log(e);
     const clsFound = e.path[2].classList.item(0);
         if (clsFound == 'big' || clsFound == 'big-b'){
-            image.style.width = "50%";
+            image.style.width = "60%";
             // console.log('BIG')
         } else if(clsFound == 'vertical') {
             image.style.width = "25%";
         } else if (clsFound == 'horizontal' || clsFound == 'horizontal-h'){
-            image.style.width = "90%";
+            image.style.width = "60%";
+            image.style.height = '60vh';
         } else{
             image.style.width = "50%";
         }
