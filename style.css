@@ -3,6 +3,7 @@ body{
     padding: 0;
     background: #fff;
     /* overflow: hidden; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 #header{
     width: 100%;
@@ -32,6 +33,25 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     height: 90vh;
+    position: relative;
+    color: #fff;
+}
+
+.content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content input{
+    width: 400px;
+    /* padding: 10px 30px; */
+    height: 40px;
+    border-radius: 10px;
+}
+.content button{
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 #container{
     /* width: 100%; */
